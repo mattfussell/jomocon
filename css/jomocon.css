@@ -1,6 +1,5 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *, ::before, ::after {
@@ -29,34 +28,23 @@ nav {
   overflow-x: hidden;
   background: white;
 }
-
 nav div.navContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100%;
-  padding: 1em .5em;
+  padding: 1em 0.5em;
 }
-
 nav div.navContainer > a.close-nav {
   position: absolute;
   top: 0;
   right: 1em;
   text-decoration: none;
 }
-
 nav div.navContainer .navLinks > a {
   display: block;
   text-decoration: none;
 }
-
 nav div.navContainer div.navSocials a {
   display: block;
   text-decoration: none;
@@ -68,5 +56,4 @@ nav div.navContainer div.navSocials a {
 
 .hidden {
   display: none !important;
-}
-/*# sourceMappingURL=jomocon.css.map */
+}/*# sourceMappingURL=jomocon.css.map */
