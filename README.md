@@ -12,3 +12,9 @@
 
 * implement JS as necessary
 * implement advanced CSS as necessary
+
+#### Immediate Goals
+
+* Implement the background animation for the page
+* Get the nav section on the index page styled
+* Get the header section on the index page styled
