@@ -1,10 +1,42 @@
-// imports
-@use 'vars';
+// partials
 @use 'core';
 @use 'nav';
 @use 'utility';
 
-// variables
+// imports
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Sedgwick+Ave&display=swap');
+
+// vars
+$colorOne: #981E97;
+$colorTwo: #0047BB;
+$colorThree: #2AD2C9;
+$colorFour: #8D9093;
+$colorFive: #E0457B;
+$colorSix: #FF333A;
+$colorLt: #f4f4f4;
+$colorDk: #333333;
+
+$leadF: 'Sedgwick Ave', cursive;
+$pageF: 'Raleway', sans-serif;
+
+body {
+  font-family: $pageF;
+  color: $colorLt;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  font-family: $leadF;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
 
 // mixins
 
