@@ -23,12 +23,6 @@ body > footer {
   margin-bottom: 0;
 }
 
-header, section, footer {
-  width: 100vw;
-  min-height: 650px;
-  margin: 1em auto;
-}
-
 nav {
   height: 100%;
   width: 5vw;
@@ -73,15 +67,31 @@ body {
   font-family: "Raleway", sans-serif;
   color: #f4f4f4;
 }
+body .bgVideo {
+  height: 100vh;
+  width: auto;
+  opacity: 0.5;
+  overflow-x: none;
+  position: fixed;
+  z-index: -1;
+}
 
 h1, h2, h3,
 h4, h5, h6 {
   font-family: "Sedgwick Ave", cursive;
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+header.home-header {
+  height: 825px;
+}
+header.home-header .landing {
+  background: url("/img/jomocon-header-image-720.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  position: relative;
+  height: 100%;
+}
+header.home-header .landing h1 {
+  font-size: 8rem;
 }/*# sourceMappingURL=jomocon.css.map */

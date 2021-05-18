@@ -22,6 +22,15 @@ $pageF: 'Raleway', sans-serif;
 body {
   font-family: $pageF;
   color: $colorLt;
+
+  .bgVideo {
+    height: 100vh;
+    width: auto;
+    opacity: .5;
+    overflow-x: none;
+    position: fixed;
+    z-index: -1;
+  }
 }
 
 h1, h2, h3,
@@ -30,10 +39,22 @@ h4, h5, h6 {
 }
 
 header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  &.home-header {
+    height: 825px;
+
+    .landing {
+      background: url('/img/jomocon-header-image-720.jpg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-attachment: fixed;
+      position: relative;
+      height: 100%;
+
+      h1 {
+        font-size: 8rem;
+      }
+    }
+  }
 }
 
 
