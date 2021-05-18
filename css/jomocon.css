@@ -85,7 +85,7 @@ header.home-header {
   height: 825px;
 }
 header.home-header .landing {
-  background: url("/img/jomocon-header-image-720.jpg");
+  background: url("/img/jomocon-header-image-720-narrow.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   background-attachment: fixed;
@@ -93,5 +93,11 @@ header.home-header .landing {
   height: 100%;
 }
 header.home-header .landing h1 {
-  font-size: 8rem;
+  font-size: 12rem;
+  font-weight: 600;
+}
+header.home-header .landing .headerTextContainer {
+  position: absolute;
+  top: calc(20vh - 100px);
+  left: calc(100vw / 3);
 }/*# sourceMappingURL=jomocon.css.map */
