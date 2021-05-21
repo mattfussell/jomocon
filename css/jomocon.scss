@@ -1,10 +1,5 @@
-// partials
-@use 'core';
-@use 'nav';
-@use 'utility';
-
 // imports
-@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Sedgwick+Ave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Raleway&display=swap');
 
 // vars
 $colorOne: #981E97;
@@ -15,11 +10,38 @@ $colorFive: #E0457B;
 $colorSix: #FF333A;
 $colorLt: #f4f4f4;
 $colorDk: #333333;
+$colorLgDk: #222222;
+$colorLgLt: #fefefe;
 
-$leadF: 'Sedgwick Ave', cursive;
+$leadF: 'Bangers', cursive;
 $pageF: 'Raleway', sans-serif;
 
+* {
+  box-sizing: border-box;
+}
+
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  background: darkblue;
+
+  &> header {
+    border: 1px solid red;
+    margin-top: 0;
+  }
+
+  &> section {
+    border: 1px solid yellow;
+  }
+
+  &>  footer {
+    border: 1px solid green;
+    margin-bottom: 0;
+  }
+
   font-family: $pageF;
   color: $colorLt;
 
@@ -34,8 +56,98 @@ body {
 }
 
 h1, h2, h3,
-h4, h5, h6 {
+h4, h5, h6,
+.homeText {
   font-family: $leadF;
+}
+
+nav {
+  height: 100%;
+  width: 5vw;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  background: $colorOne;
+  color: $colorLt;
+  transition: all .5s ease-in-out;
+  
+
+  div.navContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 1em .5em;
+    color: inherit;
+
+    & > a.close-nav {
+      position: absolute;
+      top: -.2em;
+      right: .25em;
+      text-decoration: none;
+      color: inherit;
+      font-size: 4rem;
+      font-family: monospace;
+      transition: all .5s ease-in-out;
+    }
+
+    & .navLinks {
+
+      margin-top: 3em;
+      margin-bottom: 1em;
+  
+      & > a {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        font-family: $pageF;
+        font-size: 1.5rem;
+        font-weight: bolder;
+        line-height: 2rem;
+      }
+    }
+
+    .logoHolder {
+      a {
+        text-decoration: none;
+        display: block;
+        font-size: 2rem;
+
+        .bigger {
+          font-size: 2.5rem;
+        }
+
+        &.homeText {
+          transform: rotate(-90deg);
+          color: inherit;
+        }
+      }
+    }
+
+    div.navSocials {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+
+      & > * {
+        padding: .25em;
+      }
+      
+      a {
+        text-decoration: none;
+        display: flex;
+
+        .navImg {
+          width: 3vw;
+          height: auto;
+        }
+      }
+    }
+  } 
 }
 
 header {
@@ -49,22 +161,52 @@ header {
       background-attachment: fixed;
       position: relative;
       height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .headerTextContainer {
+        position: relative;
+
+        .topText {
+          position: absolute;
+          top: -.8em;
+          left: -1em;
+          transform: rotate(-15deg);
+        }
+        
+        .bottomText {
+          position: absolute;
+          top: .9em;
+          left: .25em;
+          transform: rotate(-15deg);
+        }
+      }
 
       h1 {
         font-size: 12rem;
         font-weight: 600;
+        letter-spacing: .05em;
+        color: $colorLgLt;
+        text-shadow: .05em .05em $colorLgDk;
+
+        span.bigger {
+          font-size: 15rem;
+          letter-spacing: .05em;
+        }
       }
 
-      .headerTextContainer {
-        position: absolute;
-        top: calc(20vh - 100px);
-        left: calc(100vw / 3);
-
+      .jomoconLogoContainer {
+        margin: auto;
+        text-align: center;
+        & > img {
+          width: 250px;
+          height: auto;
+        }
       }
     }
   }
 }
-
 
 
 // mixins
@@ -74,3 +216,24 @@ header {
 // core css
 
 // utility classes
+.openNav {
+  width: 25vw;
+  background: $colorSix;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.rotate45 {
+  transform: rotate(45deg);
+}
+
+.navSocialsH {
+  flex-direction: initial !important;
+  justify-content: space-around;
+}
+
+.navContainerOpen {
+  justify-content: flex-start !important;
+}

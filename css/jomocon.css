@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Sedgwick+Ave&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Raleway&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -10,6 +10,8 @@
 
 body {
   background: darkblue;
+  font-family: "Raleway", sans-serif;
+  color: #f4f4f4;
 }
 body > header {
   border: 1px solid red;
@@ -22,51 +24,6 @@ body > footer {
   border: 1px solid green;
   margin-bottom: 0;
 }
-
-nav {
-  height: 100%;
-  width: 5vw;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  background: white;
-}
-nav div.navContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  padding: 1em 0.5em;
-}
-nav div.navContainer > a.close-nav {
-  position: absolute;
-  top: 0;
-  right: 1em;
-  text-decoration: none;
-}
-nav div.navContainer .navLinks > a {
-  display: block;
-  text-decoration: none;
-}
-nav div.navContainer div.navSocials a {
-  display: block;
-  text-decoration: none;
-}
-
-.openNav {
-  width: 15vw;
-}
-
-.hidden {
-  display: none !important;
-}
-
-body {
-  font-family: "Raleway", sans-serif;
-  color: #f4f4f4;
-}
 body .bgVideo {
   height: 100vh;
   width: auto;
@@ -77,8 +34,83 @@ body .bgVideo {
 }
 
 h1, h2, h3,
-h4, h5, h6 {
-  font-family: "Sedgwick Ave", cursive;
+h4, h5, h6,
+.homeText {
+  font-family: "Bangers", cursive;
+}
+
+nav {
+  height: 100%;
+  width: 5vw;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  background: #981E97;
+  color: #f4f4f4;
+  transition: all 0.5s ease-in-out;
+}
+nav div.navContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 1em 0.5em;
+  color: inherit;
+}
+nav div.navContainer > a.close-nav {
+  position: absolute;
+  top: -0.2em;
+  right: 0.25em;
+  text-decoration: none;
+  color: inherit;
+  font-size: 4rem;
+  font-family: monospace;
+  transition: all 0.5s ease-in-out;
+}
+nav div.navContainer .navLinks {
+  margin-top: 3em;
+  margin-bottom: 1em;
+}
+nav div.navContainer .navLinks > a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  line-height: 2rem;
+}
+nav div.navContainer .logoHolder a {
+  text-decoration: none;
+  display: block;
+  font-size: 2rem;
+}
+nav div.navContainer .logoHolder a .bigger {
+  font-size: 2.5rem;
+}
+nav div.navContainer .logoHolder a.homeText {
+  transform: rotate(-90deg);
+  color: inherit;
+}
+nav div.navContainer div.navSocials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+nav div.navContainer div.navSocials > * {
+  padding: 0.25em;
+}
+nav div.navContainer div.navSocials a {
+  text-decoration: none;
+  display: flex;
+}
+nav div.navContainer div.navSocials a .navImg {
+  width: 3vw;
+  height: auto;
 }
 
 header.home-header {
@@ -91,13 +123,63 @@ header.home-header .landing {
   background-attachment: fixed;
   position: relative;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header.home-header .landing .headerTextContainer {
+  position: relative;
+}
+header.home-header .landing .headerTextContainer .topText {
+  position: absolute;
+  top: -0.8em;
+  left: -1em;
+  transform: rotate(-15deg);
+}
+header.home-header .landing .headerTextContainer .bottomText {
+  position: absolute;
+  top: 0.9em;
+  left: 0.25em;
+  transform: rotate(-15deg);
 }
 header.home-header .landing h1 {
   font-size: 12rem;
   font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #fefefe;
+  text-shadow: 0.05em 0.05em #222222;
 }
-header.home-header .landing .headerTextContainer {
-  position: absolute;
-  top: calc(20vh - 100px);
-  left: calc(100vw / 3);
+header.home-header .landing h1 span.bigger {
+  font-size: 15rem;
+  letter-spacing: 0.05em;
+}
+header.home-header .landing .jomoconLogoContainer {
+  margin: auto;
+  text-align: center;
+}
+header.home-header .landing .jomoconLogoContainer > img {
+  width: 250px;
+  height: auto;
+}
+
+.openNav {
+  width: 25vw;
+  background: #FF333A;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.rotate45 {
+  transform: rotate(45deg);
+}
+
+.navSocialsH {
+  flex-direction: initial !important;
+  justify-content: space-around;
+}
+
+.navContainerOpen {
+  justify-content: flex-start !important;
 }/*# sourceMappingURL=jomocon.css.map */
