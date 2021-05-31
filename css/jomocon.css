@@ -8,8 +8,13 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: darkblue;
+  overflow-x: hidden;
   font-family: "Raleway", sans-serif;
   color: #f4f4f4;
 }
@@ -21,7 +26,7 @@ body .bgVideo {
   height: 100vh;
   width: auto;
   opacity: 0.5;
-  overflow-x: none;
+  overflow: hidden;
   position: fixed;
   z-index: -1;
 }
@@ -43,6 +48,7 @@ nav {
   background: #981E97;
   color: #f4f4f4;
   transition: all 0.5s ease-in-out;
+  border-right: 10px solid #f4f4f4;
 }
 nav div.navContainer {
   display: flex;
@@ -56,7 +62,7 @@ nav div.navContainer {
 nav div.navContainer > a.close-nav {
   position: absolute;
   top: -0.2em;
-  right: 0.25em;
+  right: 0.15em;
   text-decoration: none;
   color: inherit;
   font-size: 4rem;
@@ -66,15 +72,42 @@ nav div.navContainer > a.close-nav {
 nav div.navContainer .navLinks {
   margin-top: 3em;
   margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 nav div.navContainer .navLinks > a {
   display: block;
   text-decoration: none;
-  color: inherit;
+  color: #333333;
   font-family: "Raleway", sans-serif;
   font-size: 1.5rem;
   font-weight: bolder;
   line-height: 2rem;
+  transition: all 0.15s linear;
+}
+nav div.navContainer .navLinks > a:visited {
+  color: #333333;
+}
+nav div.navContainer .navLinks > a:hover, nav div.navContainer .navLinks > a:focus {
+  transform: scale(1.1);
+  color: #f4f4f4;
+  text-shadow: 0.1em 0.1em #333333;
+}
+nav div.navContainer .navLinks > a:active {
+  color: #fefefe;
+}
+nav div.navContainer .navLinks a.comingSoon {
+  color: #777777;
+  cursor: default;
+}
+nav div.navContainer .navLinks a.comingSoon:hover, nav div.navContainer .navLinks a.comingSoon:focus {
+  text-shadow: none;
+  transform: scale(1);
+}
+nav div.navContainer .navLinks a.active {
+  color: #f4f4f4;
 }
 nav div.navContainer .logoHolder a {
   text-decoration: none;
@@ -156,26 +189,57 @@ header.home-header .landing .jomoconLogoContainer > img {
 }
 
 .home-feature1,
-.home-feature2 {
+.home-feature2,
+.home-feature1_5 {
   padding: 2em 3em;
   font-size: 2rem;
   line-height: 1.3;
 }
 .home-feature1 h2, .home-feature1 h3,
 .home-feature2 h2,
-.home-feature2 h3 {
+.home-feature2 h3,
+.home-feature1_5 h2,
+.home-feature1_5 h3 {
   letter-spacing: 0.05em;
   margin-bottom: 0.5em;
   text-shadow: 0.1em 0.1em #222222;
 }
 .home-feature1 h2 span.bigger, .home-feature1 h3 span.bigger,
 .home-feature2 h2 span.bigger,
-.home-feature2 h3 span.bigger {
+.home-feature2 h3 span.bigger,
+.home-feature1_5 h2 span.bigger,
+.home-feature1_5 h3 span.bigger {
   font-size: 3.5rem;
 }
 .home-feature1 p,
-.home-feature2 p {
+.home-feature2 p,
+.home-feature1_5 p {
   margin-bottom: 1em;
+}
+
+.home-feature1_5 .formsContainer {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+.home-feature1_5 .formsContainer .panelForm,
+.home-feature1_5 .formsContainer .sponsorForm {
+  background: #fefefe;
+  width: 45vw;
+  border-radius: 1em;
+  padding: 1em;
+}
+.home-feature1_5 .formsContainer .panelForm iframe,
+.home-feature1_5 .formsContainer .sponsorForm iframe {
+  width: 100%;
+  min-height: 540px;
+}
+.home-feature1_5 .formsContainer .panelForm {
+  border: 0.5em solid #FF333A;
+}
+.home-feature1_5 .formsContainer .sponsorForm {
+  border: 0.5em solid #0047BB;
 }
 
 .home-feature2 {
@@ -192,22 +256,29 @@ header.home-header .landing .jomoconLogoContainer > img {
   display: flex;
   gap: 1em;
   margin-bottom: 1em;
+  justify-content: space-around;
+  min-height: 200px;
 }
 .home-feature2 .teamCards .card {
   height: 350px;
-  width: 200px;
   background: #333333;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   padding: 0.5em;
   border-radius: 5px;
   box-shadow: 0.3em 0.3em #222222;
+  transition: width 0.75s ease-in-out;
 }
-.home-feature2 .teamCards .card .cardAvatar {
+.home-feature2 .teamCards .card .imgAndNameHolder .cardAvatar {
   width: 160px;
   height: 160px;
   border-radius: 10px;
+}
+.home-feature2 .teamCards .card .cardAbout {
+  padding: 1em;
+  opacity: 0;
+  transition: opacity 0.25s linear;
 }
 .home-feature2 .teamCards .card h3 {
   text-align: center;
@@ -295,5 +366,26 @@ header.home-header .landing .jomoconLogoContainer > img {
 }
 
 .openCard {
-  flex-grow: 5;
+  width: 80vh !important;
+}
+
+.closedCard {
+  width: 200px !important;
+}
+
+.opFull {
+  opacity: 1 !important;
+}
+
+.opNone {
+  opacity: 0 !important;
+}
+
+@media screen and (max-width: 1280px) {
+  header.home-header {
+    height: 850px;
+  }
+  header.home-header .landing {
+    background: url("/img/jomocon-header-image-1080-narrow.jpg");
+  }
 }/*# sourceMappingURL=jomocon.css.map */
