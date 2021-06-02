@@ -44,7 +44,7 @@ body {
   // }
 
   &>  footer {
-    border: 1px solid green;
+    // border: 1px solid green;
     margin-bottom: 0;
   }
 
@@ -199,7 +199,7 @@ header {
     height: 825px;
 
     .landing {
-      background: url('/img/jomocon-header-image-720-narrow.jpg');
+      background: url('/img/jomocon-header-image-1080-narrow.jpg');
       background-repeat: no-repeat;
       background-size: contain;
       background-attachment: fixed;
@@ -323,7 +323,6 @@ header {
     
     .card {
       height: 350px;
-      // width: 200px;
       background: $colorDk;
       display: flex;
       justify-content: space-around;
@@ -386,7 +385,7 @@ header {
     address {
       display: block;
       font-style: normal;
-      width: 620px;
+      width: 45vw;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -418,12 +417,6 @@ header {
     }
   }
 }
-
-// mixins
-
-// functions
-
-// core css
 
 // utility classes
 .openNav {
@@ -516,14 +509,126 @@ header {
       height: 850px;
   
       .landing {
-        background: url('/img/jomocon-header-image-1080-narrow.jpg');
+        background: url('/img/jomocon-header-image-720-narrow.jpg');
+        background-size: cover;
+        background-attachment: scroll;
       }
     }
+  }
+
+  .home-feature2 {
+    .teamCards {
+      .card {
+        height: 300px;
+
+        .imgAndNameHolder .cardAvatar {
+          width: 120px;
+          height: 120px;
+        }
+      }
+    }
+  }
+
+  .closedCard {
+    width: 160px !important;
   }
 }
 
 // 1024
-@media screen and (max-width: 1024) {
+@media screen and (max-width: 1024px) {
+  nav {
+    width: 7vw;
+    border-right: 7px solid $colorLt;
+
+    div.navContainer {
+      & > a.close-nav {
+        right: .2em;
+      }
+
+      .logoHolder {
+        a {
+          font-size: 2.5rem;
+  
+          .bigger {
+            font-size: 3rem;
+          }
+        }
+      }
+
+      div.navSocials {
+        a {
+          .navImg {
+            width: 4vw;
+          }
+        }
+      }
+    }
+  }
+
+  .home-feature1,
+  .home-feature2,
+  .home-feature1_5 {
+    padding: 1em 3em;
+    font-size: 2rem;
+    line-height: 1.3;
+
+    h2, h3 {
+      letter-spacing: .05em;
+      margin-bottom: .4em;
+      text-shadow: .1em .1em $colorLgDk;
+
+      span.bigger {
+        font-size: 3.5rem;
+      }
+    }
+
+    p {
+      margin-bottom: .5em;
+    }
+  }
+
+  .home-feature1_5 {
+    .formsContainer {
+      flex-direction: column;
+
+      .panelForm,
+      .sponsorForm {
+        width: 80vw;
+      }
+    }
+  }
+
+  .home-feature2 {
+    .teamCards {
+      .card {
+        height: 280px;
+
+        .imgAndNameHolder .cardAvatar {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+  }
+
+  #footer {
+    .footerContactInfo {
+      flex-direction: column;
+      gap: 1.5em;
+  
+      address {
+        width: 80vw;
+      }
+    }
+  
+    .footerContactForm {
+      width: 80vw;
+    }
+  }
+
+  .closedCard {
+    width: 140px !important;
+  }
 
 }
 
