@@ -221,6 +221,7 @@ header.home-header .landing .jomoconLogoContainer > img {
   gap: 1em;
   justify-content: center;
   align-items: center;
+  margin: inherit auto;
 }
 .home-feature1_5 .formsContainer .panelForm,
 .home-feature1_5 .formsContainer .sponsorForm {
@@ -380,6 +381,137 @@ header.home-header .landing .jomoconLogoContainer > img {
   opacity: 0 !important;
 }
 
+@media screen and (min-width: 1600px) {
+  header.home-header .landing {
+    background: url("/img/jomocon-header-image-1080-narrow.jpg");
+    background-size: cover;
+  }
+
+  nav {
+    width: 4vw;
+    border-right: 10px solid #f4f4f4;
+  }
+  nav div.navContainer > a.close-nav {
+    top: -0.2em;
+    right: 0.15em;
+    font-size: 4rem;
+  }
+  nav div.navContainer .logoHolder a {
+    font-size: 2rem;
+  }
+  nav div.navContainer .logoHolder a .bigger {
+    font-size: 2.5rem;
+  }
+  nav div.navContainer div.navSocials a .navImg {
+    width: 2vw;
+    height: auto;
+  }
+
+  .home-feature2 .teamCards {
+    min-height: 200px;
+  }
+  .home-feature2 .teamCards .card {
+    height: 350px;
+    padding: 0.5em;
+  }
+  .home-feature2 .teamCards .card .imgAndNameHolder {
+    text-align: center;
+  }
+  .home-feature2 .teamCards .card .imgAndNameHolder .cardAvatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+  }
+  .home-feature2 .teamCards .card .cardAbout {
+    padding: 1em;
+  }
+  .home-feature2 .teamCards .card p {
+    font-size: 1.25rem;
+  }
+
+  .openNav {
+    width: 20vw;
+    background: #FF333A;
+  }
+
+  .openCard {
+    width: 80vh !important;
+  }
+
+  .closedCard {
+    width: 250px !important;
+  }
+}
+@media screen and (min-width: 1920px) {
+  header.home-header .landing {
+    background: url("/img/jomocon-header-image-1080.jpg");
+    background-size: cover;
+  }
+
+  .bgVideo {
+    height: 200vh;
+    width: auto;
+    opacity: 0.5;
+    overflow: hidden;
+    position: fixed;
+    z-index: -1;
+  }
+
+  nav {
+    width: 3vw;
+    border-right: 10px solid #f4f4f4;
+  }
+  nav div.navContainer > a.close-nav {
+    top: -0.2em;
+    right: 0.15em;
+    font-size: 4rem;
+  }
+  nav div.navContainer .logoHolder a {
+    font-size: 2.5rem;
+  }
+  nav div.navContainer .logoHolder a .bigger {
+    font-size: 3rem;
+  }
+  nav div.navContainer div.navSocials a .navImg {
+    width: 1.5vw;
+    height: auto;
+  }
+
+  .home-feature2 .teamCards {
+    min-height: 200px;
+  }
+  .home-feature2 .teamCards .card {
+    height: 350px;
+    padding: 0.5em;
+  }
+  .home-feature2 .teamCards .card .imgAndNameHolder {
+    text-align: center;
+  }
+  .home-feature2 .teamCards .card .imgAndNameHolder .cardAvatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+  }
+  .home-feature2 .teamCards .card .cardAbout {
+    padding: 1em;
+  }
+  .home-feature2 .teamCards .card p {
+    font-size: 1.25rem;
+  }
+
+  .openNav {
+    width: 20vw;
+    background: #FF333A;
+  }
+
+  .openCard {
+    width: 80vh !important;
+  }
+
+  .closedCard {
+    width: 300px !important;
+  }
+}
 @media screen and (max-width: 1280px) {
   header.home-header {
     height: 850px;
@@ -478,5 +610,279 @@ header.home-header .landing .jomoconLogoContainer > img {
 
   .closedCard {
     width: 140px !important;
+  }
+}
+@media screen and (max-width: 960px) {
+  .home-feature1,
+.home-feature1_5,
+.home-feature2,
+#footer {
+    padding-left: 15vw !important;
+  }
+
+  .home-feature2 .teamCards {
+    flex-wrap: wrap;
+  }
+  .home-feature2 .teamCards .card {
+    min-height: auto;
+    display: inline-flex;
+    padding: 5em;
+  }
+  .home-feature2 .teamCards .card .imgAndNameHolder .cardAvatar {
+    width: 200px;
+    height: 200px;
+  }
+
+  .closedCard {
+    width: 325px !important;
+    display: inline-flex;
+  }
+
+  .openCard {
+    width: 80vh !important;
+    padding: 5em 1em !important;
+  }
+}
+@media screen and (max-width: 959px) {
+  .home-feature1,
+.home-feature2,
+.home-feature1_5 {
+    padding: 1em 3em;
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+  .home-feature1 h2, .home-feature1 h3,
+.home-feature2 h2,
+.home-feature2 h3,
+.home-feature1_5 h2,
+.home-feature1_5 h3 {
+    letter-spacing: 0.05em;
+    margin-bottom: 0.4em;
+    text-shadow: 0.1em 0.1em #222222;
+  }
+  .home-feature1 h2 span.bigger, .home-feature1 h3 span.bigger,
+.home-feature2 h2 span.bigger,
+.home-feature2 h3 span.bigger,
+.home-feature1_5 h2 span.bigger,
+.home-feature1_5 h3 span.bigger {
+    font-size: 3.5rem;
+  }
+  .home-feature1 p,
+.home-feature2 p,
+.home-feature1_5 p {
+    margin-bottom: 0.5em;
+    font-size: 1.75rem;
+  }
+
+  nav {
+    width: 10vw;
+    border-right: 7px solid #f4f4f4;
+  }
+  nav div.navContainer > a.close-nav {
+    right: 0.25em;
+  }
+  nav div.navContainer .logoHolder a {
+    font-size: 2.5rem;
+  }
+  nav div.navContainer .logoHolder a .bigger {
+    font-size: 3rem;
+  }
+  nav div.navContainer div.navSocials a .navImg {
+    width: 6vw;
+  }
+
+  header.home-header {
+    height: 700px;
+  }
+  header.home-header .landing {
+    background: url("/img/jomocon-header-image-540-narrow.jpg");
+    background-size: cover;
+    background-attachment: scroll;
+  }
+  header.home-header .landing .headerTextContainer {
+    position: relative;
+  }
+  header.home-header .landing .headerTextContainer .topText {
+    top: -0.75em;
+    left: -1em;
+  }
+  header.home-header .landing .headerTextContainer .bottomText {
+    top: 1em;
+    left: 0.3em;
+  }
+  header.home-header .landing h1 {
+    font-size: 9rem;
+  }
+  header.home-header .landing h1 span.bigger {
+    font-size: 11rem;
+  }
+  header.home-header .landing .jomoconLogoContainer > img {
+    width: 200px;
+  }
+
+  .home-feature1_5 .formsContainer .panelForm,
+.home-feature1_5 .formsContainer .sponsorForm {
+    width: 75vw;
+  }
+
+  .home-feature2 .teamCards {
+    flex-wrap: wrap;
+  }
+  .home-feature2 .teamCards .card {
+    min-height: auto;
+    display: inline-flex;
+    padding: 5em;
+  }
+  .home-feature2 .teamCards .card .imgAndNameHolder .cardAvatar {
+    width: 200px;
+    height: 200px;
+  }
+
+  .closedCard {
+    width: 60vw !important;
+    display: inline-flex;
+  }
+
+  .openCard {
+    width: 80vh !important;
+    min-height: 50vh !important;
+    padding: 5em 1em !important;
+  }
+}
+@media screen and (max-width: 640px) {
+  header.home-header {
+    height: 75vh;
+  }
+  header.home-header .landing {
+    background: url("/img/jomocon-header-image-540-narrow.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+  header.home-header .landing .headerTextContainer {
+    position: relative;
+    left: calc(100vw - 95%);
+  }
+  header.home-header .landing .headerTextContainer .topText {
+    top: -0.75em;
+    left: -1em;
+  }
+  header.home-header .landing .headerTextContainer .bottomText {
+    top: 1em;
+    left: 0.3em;
+  }
+  header.home-header .landing h1 {
+    font-size: 9rem;
+  }
+  header.home-header .landing h1 span.bigger {
+    font-size: 11rem;
+  }
+  header.home-header .landing .jomoconLogoContainer > img {
+    width: 200px;
+  }
+
+  .home-feature1,
+.home-feature1_5,
+.home-feature2 {
+    text-align: center;
+  }
+
+  .home-feature2 .teamCards .card {
+    transition: min-height 0.75s ease-in-out;
+  }
+
+  .openNav {
+    width: 40vw;
+    background: #FF333A;
+  }
+
+  .closedCard {
+    width: 70vw !important;
+    display: inline-flex;
+  }
+
+  .openCard {
+    flex-direction: column;
+    width: 70vh !important;
+    min-height: 60vh !important;
+    padding: 5em 1em !important;
+  }
+}
+@media screen and (max-width: 540px) {
+  header.home-header {
+    height: 60vh;
+  }
+  header.home-header .landing {
+    background: url("/img/jomocon-header-image-540-narrow.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+  header.home-header .landing .headerTextContainer {
+    position: relative;
+    left: calc(100vw - 95%);
+  }
+  header.home-header .landing .headerTextContainer .topText {
+    top: -0.9em;
+    left: -1em;
+  }
+  header.home-header .landing .headerTextContainer .bottomText {
+    top: 1em;
+    left: 0.3em;
+  }
+  header.home-header .landing h1 {
+    font-size: 5.5rem;
+  }
+  header.home-header .landing h1 span.bigger {
+    font-size: 7.5rem;
+  }
+  header.home-header .landing .jomoconLogoContainer > img {
+    width: 125px;
+  }
+
+  nav {
+    width: 15vw;
+    border-right: 7px solid #f4f4f4;
+  }
+  nav div.navContainer > a.close-nav {
+    right: 0.25em;
+  }
+  nav div.navContainer .logoHolder a {
+    font-size: 2.5rem;
+  }
+  nav div.navContainer .logoHolder a .bigger {
+    font-size: 3rem;
+  }
+  nav div.navContainer div.navSocials a .navImg {
+    width: 10vw;
+  }
+
+  .home-feature1,
+.home-feature1_5,
+.home-feature2,
+#footer {
+    margin-left: 10vw !important;
+  }
+
+  .home-feature1_5 .formsContainer .panelForm,
+.home-feature1_5 .formsContainer .sponsorForm {
+    margin-left: 10vw !important;
+  }
+
+  .openNav {
+    width: 60vw;
+    background: #FF333A;
+  }
+
+  .closedCard {
+    width: 70vw !important;
+    display: inline-flex;
+  }
+
+  .openCard {
+    flex-direction: column;
+    width: 70vh !important;
+    min-height: 90vh !important;
+    padding: 1em 1em !important;
   }
 }/*# sourceMappingURL=jomocon.css.map */
